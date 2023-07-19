@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { authActions } from '../../store/actions';
-import { RegisterRequestInterface } from '../../models/registerRequest.interface';
+import { LoginRequestInterface } from '../../models/loginRequest.interface';
 import { RouterLink } from '@angular/router';
 import {
   selectIsSubmitting,
@@ -13,8 +13,8 @@ import { combineLatest } from 'rxjs';
 import { BackendErrorsMessages } from 'src/app/shared/components/backendErrorsMessages.component';
 
 @Component({
-  selector: 'mc-register',
-  templateUrl: './register.component.html',
+  selector: 'mc-login',
+  templateUrl: './login.component.html',
   standalone: true,
   imports: [
     ReactiveFormsModule,
@@ -23,9 +23,8 @@ import { BackendErrorsMessages } from 'src/app/shared/components/backendErrorsMe
     BackendErrorsMessages,
   ],
 })
-export class RegisterComponent implements OnInit {
+export class LoginComponent implements OnInit {
   form = this.fb.nonNullable.group({
-    username: ['', Validators.required],
     email: ['', Validators.required],
     password: ['', Validators.required],
   });
@@ -38,9 +37,9 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit(): void {
-    const request: RegisterRequestInterface = {
+    const request: LoginRequestInterface = {
       user: this.form.getRawValue(),
     };
-    this.store.dispatch(authActions.register({ request }));
+    this.store.dispatch(authActions.login({ request }));
   }
 }
