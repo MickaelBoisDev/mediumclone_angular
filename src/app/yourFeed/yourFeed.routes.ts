@@ -1,0 +1,9 @@
+import { Route, Router } from '@angular/router';
+import { YourFeedComponent } from './components/yourFeed.component';
+
+export const routes: Route[] = [
+  {
+    path: '',
+    component: YourFeedComponent,
+  },
+];
