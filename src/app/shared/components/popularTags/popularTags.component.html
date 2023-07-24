@@ -1,0 +1,20 @@
+<ng-container *ngIf="data$ | async as data">
+  <ul class="tag-list">
+    <!-- <li *ngFor="let tag of data.tags" class="tag-default tag-pill tag-outline">
+      {{ tag }}
+    </li> -->
+    <mc-loading *ngIf="data.isLoading"></mc-loading>
+    <mc-error-message *ngIf="data.error"></mc-error-message>
+  </ul>
+  <div class="sidebar" *ngIf="data.popularTags">
+    <p>Popular Tags</p>
+    <div class="tag-list">
+      <a
+        *ngFor="let popularTag of data.popularTags"
+        [routerLink]="['/tags', popularTag]"
+        class="tag-default tag-pill"
+        >{{ popularTag }}</a
+      >
+    </div>
+  </div>
+</ng-container>
