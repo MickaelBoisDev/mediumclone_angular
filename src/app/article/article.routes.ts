@@ -1,3 +1,4 @@
+import { ArticleService } from './../shared/services/article.service';
 import { Route } from '@angular/router';
 import { ArticleComponent } from './components/article/article.component';
 import * as articleEffects from './store/effects';
@@ -12,6 +13,7 @@ export const routes: Route[] = [
     providers: [
       provideEffects(articleEffects),
       provideState(articleFeatureKey, articleReducer),
+      ArticleService,
     ],
   },
 ];

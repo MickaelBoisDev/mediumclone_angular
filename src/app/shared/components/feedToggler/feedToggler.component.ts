@@ -14,5 +14,6 @@ export class feedTogglerComponent {
   @Input() tagName?: string;
 
   currentUser$ = this.store.select(selectCurrentUser);
-  constructor(private store: Store) {}
+  constructor(private store: Store) { }
+  
 }
