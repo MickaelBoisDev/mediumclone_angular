@@ -1,4 +1,4 @@
-import { BackendErrorsInterface } from "./../../shared/models/backendErrors.interface";
+import { BackendErrorsInterface } from '../../shared/models/backendErrors.interface';
 export interface CreateArticleStateInterface {
   isSubmitting: boolean;
   validationErrors: BackendErrorsInterface | null;
