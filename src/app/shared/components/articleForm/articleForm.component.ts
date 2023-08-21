@@ -9,7 +9,7 @@ import { BackendErrorsMessages } from '../backendErrorsMessages.component';
   selector: 'mc-article-form',
   templateUrl: './articleForm.component.html',
   standalone: true,
-  imports: [ReactiveFormsModule, BackendErrorsMessages, CommonModule],
+  imports: [BackendErrorsMessages, ReactiveFormsModule, CommonModule],
 })
 export class ArticleFormComponent implements OnInit {
   @Input() initialValues?: ArticleFormValuesInterface;
