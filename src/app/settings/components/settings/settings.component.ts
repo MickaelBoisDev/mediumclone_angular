@@ -11,7 +11,7 @@ import {
 import { CommonModule } from '@angular/common';
 import { authActions } from 'src/app/auth/store/actions';
 import { CurrentUserRequestInterface } from 'src/app/shared/models/currentRequest.interface';
-import { BackendErrorsMessages } from 'src/app/shared/components/backendErrorsMessages.component';
+import { BackendErrorsMessages } from 'src/app/shared/components/backendErrorsMessages/backendErrorsMessages.component';
 
 @Component({
   selector: 'mc-settings',

@@ -3,7 +3,7 @@ import { ArticleFormValuesInterface } from './types/articleFormValues.interface'
 import { BackendErrorsInterface } from '../../models/backendErrors.interface';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { BackendErrorsMessages } from '../backendErrorsMessages.component';
+import { BackendErrorsMessages } from '../backendErrorsMessages/backendErrorsMessages.component';
 
 @Component({
   selector: 'mc-article-form',

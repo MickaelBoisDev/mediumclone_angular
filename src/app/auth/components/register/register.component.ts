@@ -10,7 +10,7 @@ import {
 } from '../../store/reducers';
 import { CommonModule } from '@angular/common';
 import { combineLatest } from 'rxjs';
-import { BackendErrorsMessages } from 'src/app/shared/components/backendErrorsMessages.component';
+import { BackendErrorsMessages } from 'src/app/shared/components/backendErrorsMessages/backendErrorsMessages.component';
 
 @Component({
   selector: 'mc-register',
