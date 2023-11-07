@@ -24,11 +24,8 @@
               class="nav-link"
               [routerLink]="['/profiles', data.currentUser.username]"
             >
-              <img
-                class="user-pic"
-                src="../../../../assets/images/PP_v.jpg"
-                alt="userImage"
-              />
+              <img class="user-pic" [src]="data.currentUser.image" />
+
               &nbsp;{{ data.currentUser.username }}
             </a>
           </li>
@@ -43,7 +40,7 @@
           <li class="nav-item">
             <a class="nav-link" routerLink="/register">
               <i class="ion-gear-a"></i>
-              &nbsp;Sign out
+              &nbsp;Sign Up
             </a>
           </li>
         </ng-container>
